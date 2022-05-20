@@ -12,4 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= stub 'article-stylesheet'
  */
+ h2{
+    color: green;
+}

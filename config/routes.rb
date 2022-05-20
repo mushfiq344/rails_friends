@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
- root'home#index'
- get "home/about"
+  get 'resumes/index'
+  get 'resumes/new'
+  get 'resumes/create'
+  get 'resumes/destroy'
 
+ get "home/about"
+ resources :resumes, only: [:index, :new, :create, :destroy]
+ root "resumes#index"
  
 
  get "/articles", to: "articles#index"
