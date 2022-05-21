@@ -1,0 +1,27 @@
+<%= form_with(model: post_attachment) do |form| %>
+  <% if post_attachment.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(post_attachment.errors.count, "error") %> prohibited this post_attachment from being saved:</h2>
+
+      <ul>
+        <% post_attachment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :post_id, style: "display: block" %>
+    <%= form.number_field :post_id %>
+  </div>
+
+  <div>
+    <%= form.label :avatar, style: "display: block" %>
+    <%= form.text_field :avatar %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

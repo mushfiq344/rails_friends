@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Post attachments</h1>
+
+<div id="post_attachments">
+  <% @post_attachments.each do |post_attachment| %>
+    <%= render post_attachment %>
+    <p>
+      <%= link_to "Show this post attachment", post_attachment %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New post attachment", new_post_attachment_path %>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @post_attachment %>
+
+<div>
+  <%= link_to "Edit this post attachment", edit_post_attachment_path(@post_attachment) %> |
+  <%= link_to "Back to post attachments", post_attachments_path %>
+
+  <%= button_to "Destroy this post attachment", @post_attachment, method: :delete %>
+</div>

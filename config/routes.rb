@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :post_attachments
+  resources :posts
   get 'resumes/index'
   get 'resumes/new'
   get 'resumes/create'
